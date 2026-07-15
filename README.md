@@ -15,9 +15,7 @@ modes. Built on Claude Cowork.
 - A paid Claude plan (**Pro, Max, Team, or Enterprise**) — plugins aren't available on the free plan.
 - The **Claude desktop app** with **Cowork** (setup creates a folder on your computer and shows its progress).
 
-## Install — two ways
-
-### Option A · One-click, with auto-updates (recommended)
+## Install
 
 1. In the Claude app, open **Customize** (left sidebar) → **Plugins**.
 2. In **Personal plugins**, click **+ → Add marketplace → Add from a repository**.
@@ -26,15 +24,6 @@ modes. Built on Claude Cowork.
 5. **Relaunch the app** when prompted so the skill registers.
 
 When a new version ships, you'll get it automatically — just **relaunch** to update.
-
-### Option B · Direct file
-
-1. Download the plugin file: **[dist/everyday-pa-system-v0.8.1.plugin](dist/everyday-pa-system-v0.8.1.plugin)**
-   — open it and click **Download raw file**.
-2. In the Claude app: **Customize → Plugins → upload a custom plugin file** and pick it.
-3. **Relaunch the app.**
-
-*(Option A is better — it updates itself. Use this one only if you'd rather not add a marketplace.)*
 
 ## Start it
 
