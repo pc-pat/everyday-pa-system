@@ -29,9 +29,12 @@ When a new version ships, you'll get it automatically — just **relaunch** to u
 
 ### Option B · Direct file
 
-1. Download `everyday-pa-system.plugin` (see Releases).
+1. Download the plugin file: **[dist/everyday-pa-system-v0.8.1.plugin](dist/everyday-pa-system-v0.8.1.plugin)**
+   — open it and click **Download raw file**.
 2. In the Claude app: **Customize → Plugins → upload a custom plugin file** and pick it.
 3. **Relaunch the app.**
+
+*(Option A is better — it updates itself. Use this one only if you'd rather not add a marketplace.)*
 
 ## Start it
 
