@@ -1,0 +1,18 @@
+{
+  "name": "the-everyday-pa-system",
+  "owner": {
+    "name": "The Everyday PA System"
+  },
+  "metadata": {
+    "description": "The Everyday PA System — your personal AI team that turns intent into done.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "everyday-pa-system",
+      "source": "./plugins/everyday-pa-system",
+      "description": "The Everyday PA System — your personal AI team that turns intent into done. A team of specialist assistants that knows you and runs your life and work, end to end. Built on Claude Cowork.",
+      "version": "0.8.1"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "everyday-pa-system",
+  "version": "0.8.1",
+  "description": "Everyday PA System \u2014 a team of specialist assistants that knows you and runs your life and work, end to end. Built on Claude Cowork.",
+  "author": {
+    "name": "The Everyday PA System"
+  },
+  "keywords": [
+    "personal assistant",
+    "productivity",
+    "life admin",
+    "chief of staff",
+    "team"
+  ],
+  "displayName": "Everyday PA System"
+}

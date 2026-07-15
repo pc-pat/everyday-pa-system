@@ -1,0 +1,57 @@
+<svg viewBox="0 0 900 452" xmlns="http://www.w3.org/2000/svg" role="img" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+<title>The Team: an AI-native firm with a CEO, Chief of Staff, six doers, a board, a red team, and an expert bench</title>
+<desc>You are the CEO. Claude Chief of Staff orchestrates six doer modes that share one memory, advised by the Board of Directors, challenged by the Red Team, drawing on the Expert Bench. One team, one shared memory, one conversation.</desc>
+<defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#5c6370"/></marker></defs>
+<rect x="0" y="0" width="900" height="452" fill="#faf9f6"/>
+
+<rect x="360" y="14" width="180" height="40" rx="9" fill="#ffffff" stroke="#d0d0cc"/>
+<text x="450" y="39" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1f2328">You — CEO</text>
+<line x1="450" y1="54" x2="450" y2="82" stroke="#5c6370" stroke-width="1.5" marker-end="url(#a)"/>
+
+<rect x="300" y="82" width="300" height="46" rx="10" fill="#fdf6ec" stroke="#b45309" stroke-width="2"/>
+<text x="450" y="110" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">Claude Chief of Staff</text>
+<text x="450" y="144" text-anchor="middle" font-size="10.5" fill="#5c6370">holds the vision · routes work · routes your requests (not a gatekeeper)</text>
+
+<text x="14" y="160" font-size="10.5" font-weight="700" fill="#b45309">DOERS — execute</text>
+<g>
+  <rect x="14" y="166" width="138" height="66" rx="8" fill="#ffffff" stroke="#d0d0cc"/>
+  <text x="83" y="194" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1f2328">AI System Architect</text>
+  <text x="83" y="214" text-anchor="middle" font-size="9" fill="#5c6370">builds AI systems</text>
+  <rect x="162" y="166" width="138" height="66" rx="8" fill="#ffffff" stroke="#d0d0cc"/>
+  <text x="231" y="194" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1f2328">PA</text>
+  <text x="231" y="214" text-anchor="middle" font-size="9" fill="#5c6370">ops &amp; life</text>
+  <rect x="310" y="166" width="138" height="66" rx="8" fill="#ffffff" stroke="#d0d0cc"/>
+  <text x="379" y="194" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1f2328">Venture</text>
+  <text x="379" y="214" text-anchor="middle" font-size="9" fill="#5c6370">build products</text>
+  <rect x="458" y="166" width="138" height="66" rx="8" fill="#ffffff" stroke="#d0d0cc"/>
+  <text x="527" y="194" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1f2328">Build</text>
+  <text x="527" y="214" text-anchor="middle" font-size="9" fill="#5c6370">UX/UI · apps · data</text>
+  <rect x="606" y="166" width="138" height="66" rx="8" fill="#ffffff" stroke="#d0d0cc"/>
+  <text x="675" y="194" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1f2328">X</text>
+  <text x="675" y="214" text-anchor="middle" font-size="9" fill="#5c6370">growth · broadcast</text>
+  <rect x="754" y="166" width="138" height="66" rx="8" fill="#ffffff" stroke="#d0d0cc"/>
+  <text x="823" y="194" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1f2328">Relationships</text>
+  <text x="823" y="214" text-anchor="middle" font-size="9" fill="#5c6370">people</text>
+</g>
+
+<rect x="14" y="244" width="878" height="34" rx="8" fill="#fdf6ec" stroke="#b45309"/>
+<text x="453" y="265" text-anchor="middle" font-size="11.5" font-weight="700" fill="#b45309">ONE SHARED BRAIN — memory/ · every hat reads &amp; writes it</text>
+
+<g>
+  <rect x="14" y="292" width="284" height="70" rx="8" fill="#ffffff" stroke="#d0d0cc"/>
+  <text x="156" y="318" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1f2328">ADVISORS (optional)</text>
+  <text x="156" y="338" text-anchor="middle" font-size="9.5" fill="#5c6370">advisors · add later — they counsel, never act</text>
+  <text x="156" y="352" text-anchor="middle" font-size="9.5" fill="#5c6370">counsel, don't execute</text>
+  <rect x="308" y="292" width="284" height="70" rx="8" fill="#ffffff" stroke="#d0d0cc"/>
+  <text x="450" y="318" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1f2328">RED TEAM</text>
+  <text x="450" y="338" text-anchor="middle" font-size="9.5" fill="#5c6370">challenger · mandatory dissent</text>
+  <text x="450" y="352" text-anchor="middle" font-size="9.5" fill="#5c6370">stress-tests every plan</text>
+  <rect x="602" y="292" width="290" height="70" rx="8" fill="#ffffff" stroke="#d0d0cc"/>
+  <text x="747" y="318" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1f2328">EXPERT BENCH</text>
+  <text x="747" y="338" text-anchor="middle" font-size="9.5" fill="#5c6370">on-demand specialists</text>
+  <text x="747" y="352" text-anchor="middle" font-size="9.5" fill="#5c6370">summoned per task</text>
+</g>
+
+<text x="450" y="392" text-anchor="middle" font-size="10.5" fill="#1f2328">Your team works with you directly, in one conversation.</text>
+<text x="450" y="414" text-anchor="middle" font-size="10.5" font-style="italic" fill="#b45309">Foundation: an expert = a written playbook + shared memory, not code. Build the team = write good playbooks.</text>
+</svg>

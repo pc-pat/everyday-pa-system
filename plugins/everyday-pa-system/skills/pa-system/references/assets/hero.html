@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Everyday PA System</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body { background-color: #faf9f7; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+  /* Breathing lives ONLY on the inner orb, so it never touches the
+     wrapper transform the JS parallax owns. No fighting. */
+  @keyframes breathe {
+    0%   { transform: translate(-50%, -50%) scale(0.9); opacity: 0.7; }
+    100% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+  }
+  @keyframes drift {
+    0%   { transform: translate(-50%, -50%) rotate(0deg) scale(0.85); opacity: 0.75; }
+    100% { transform: translate(-42%, -58%) rotate(18deg) scale(1.1); opacity: 1; }
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) { .orb, h1, p, div { animation: none !important; } }
+</style>
+</head>
+<body>
+<div style="position:fixed; inset:0; display:flex; align-items:center; justify-content:center; padding:40px; overflow:hidden; font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter',sans-serif;">
+
+  <!-- Ambient aurora. JS moves the wrappers (translate3d), CSS breathes the orbs inside them. -->
+  <div style="position:absolute; inset:0; z-index:0; pointer-events:none;">
+    <div id="w1" style="position:absolute; top:50%; left:50%; width:0; height:0; margin-left:-20vw; margin-top:-20vh; will-change:transform;">
+      <div class="orb" style="position:absolute; width:45vw; height:45vw; border-radius:50%; background:rgba(37,99,235,0.15); filter:blur(80px); transform:translate(-50%,-50%); animation:breathe 8s infinite alternate ease-in-out; will-change:transform,opacity;"></div>
+    </div>
+    <div id="w2" style="position:absolute; top:50%; left:50%; width:0; height:0; margin-left:20vw; margin-top:20vh; will-change:transform;">
+      <div class="orb" style="position:absolute; width:55vw; height:55vw; border-radius:50%; background:rgba(139,92,246,0.12); filter:blur(80px); transform:translate(-50%,-50%); animation:breathe 12s infinite alternate-reverse ease-in-out; will-change:transform,opacity;"></div>
+    </div>
+    <div id="w3" style="position:absolute; top:50%; left:50%; width:0; height:0; will-change:transform;">
+      <div class="orb" style="position:absolute; width:40vw; height:40vw; border-radius:50%; background:rgba(217,119,6,0.10); filter:blur(80px); transform:translate(-50%,-50%); animation:drift 15s infinite alternate ease-in-out; will-change:transform,opacity;"></div>
+    </div>
+  </div>
+
+  <!-- Hero copy -->
+  <div style="position:relative; z-index:10; text-align:center; max-width:800px; pointer-events:none;">
+    <div style="font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:#6b7280; margin-bottom:24px; opacity:0.8; animation:rise 0.7s ease-out both;">A Personal AI Architecture</div>
+    <h1 style="font-size:clamp(40px,7vw,68px); font-weight:800; letter-spacing:-2.5px; color:#111111; line-height:1.05; margin-bottom:24px; animation:rise 0.8s ease-out 0.08s both;">The Everyday PA System</h1>
+    <p style="font-size:clamp(18px,2.4vw,24px); font-weight:400; color:#6b7280; line-height:1.4; letter-spacing:-0.4px; max-width:620px; margin:0 auto; animation:rise 0.8s ease-out 0.16s both;">
+      Your personal AI team that turns <span style="background:linear-gradient(135deg,#111111 20%,#2563eb 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; font-weight:500;">intent into done.</span>
+    </p>
+  </div>
+</div>
+
+<script>
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) return;
+
+  var target = { x: 0, y: 0 }, current = { x: 0, y: 0 };
+  // Depth per layer: sign flips create parallax; magnitude sets distance.
+  var layers = [
+    { el: document.getElementById('w1'), dx: 22,  dy: 16 },
+    { el: document.getElementById('w2'), dx: -30, dy: -22 },
+    { el: document.getElementById('w3'), dx: 14,  dy: 11 }
+  ];
+
+  window.addEventListener('mousemove', function (e) {
+    target.x = (e.clientX / window.innerWidth) * 2 - 1;
+    target.y = (e.clientY / window.innerHeight) * 2 - 1;
+  }, { passive: true });
+
+  // Single rAF loop, lerp toward target -> buttery, no transition fighting.
+  var EASE = 0.075;
+  (function tick() {
+    current.x += (target.x - current.x) * EASE;
+    current.y += (target.y - current.y) * EASE;
+    for (var i = 0; i < layers.length; i++) {
+      var l = layers[i];
+      if (l.el) l.el.style.transform = 'translate3d(' + (current.x * l.dx) + 'vw,' + (current.y * l.dy) + 'vh,0)';
+    }
+    requestAnimationFrame(tick);
+  })();
+})();
+</script>
+</body>
+</html>
